@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.hide {
+    display: none !important;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    outline: none;
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    position: relative;
+    vertical-align: middle;
+}
+
+input:checked {
+    content: url("../image/orangeCheck.svg");
+    border: none;
+    outline: none;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header .brandImageAndHeading {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.brandImageAndHeading .heading {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    padding-left: 10px;
+    height: 100%;
+    border-left: 1px solid lightgray;
+}
+
+.brandImageAndHeading img {
+    width: 100px;
+    height: 70px;
+}
+
+header .timerAndEndClass {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+header .hamburger {
+    display: none;
+}
+
+.timerAndEndClass #timer {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.endClassButton {
+    padding: 10px 45px;
+    font-size: 15px;
+    color: white;
+    border: none;
+    background-color: red;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.inactiveButton {
+    background-color: gray;
+}
+
+#popupModal[class="active"] .overlay {
+    display:block;
+}
+
+#popupModal[class="active"] .content {
+    transition:all 300ms ease-in-out;
+    transform:translate(-50%,-50%) scale(1);
+}
+
+#popupModal .overlay {
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.7);
+    z-index:1;
+    display:none;
+  }
+  
+#popupModal .content {
+    position:absolute;
+    top:45%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    background:#fff;
+    width: 40%;
+    z-index:2;
+    text-align:left;
+    padding:20px;
+    box-sizing:border-box;
+    border-radius: 10px;
+  }
+  
+#popupModal .content .close-btn {
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:10px;
+    width:30px;
+    height:30px;
+    color: gray;
+    font-size:30px;
+    font-weight: 100;
+    line-height:30px;
+    text-align:center;
+}
+
+fieldset {
+    border: none;
+    margin-top: 20px;
+}
+
+fieldset > legend {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+fieldset label {
+    margin-left: 10px;
+    font-size: 17px;
+    vertical-align: middle;
+}
+
+fieldset > div {
+    margin-bottom: 10px;
+}
+
+.classInterrupted .sub1 .sub2 textarea {
+    width: 100%;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.sub1, .sub2 {
+    display: none;
+}
+
+#ClassInterrupted:checked ~ .sub1{
+    display: block;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+
+#otherReason:checked ~ .sub2 {
+    display: block;
+}
+
+.sub1 div {
+    margin-bottom: 10px;
+}
+
+.content .cancelButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    color: gray;
+    outline: none;
+}

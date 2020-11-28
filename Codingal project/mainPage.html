@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">   <!-- For Responsive web design -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/mainStyle.css">
+        <link rel="stylesheet" href="css/tablet.css">
+        <link rel="stylesheet" href="css/smartPhone.css">
+        <script type="text/javascript" src="JS/mainJS.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="brandImageAndHeading">
+                <img class="codingalLogo" src="https://cdn.codingal.com/images/logo-with-text.svg">
+                <h2 class="heading">Trial Lesson [Grade 1-3]</h2>
+            </div>
+            <div class="timerAndEndClass">
+                <div id="timer"></div>
+                <button onclick="togglePopup()" class="endClassButton">End Class</button>
+            </div>
+            <div class="hamburger">
+                <svg class="hamburgerIcon" viewBox="0 0 100 80" width="40" height="40" onclick="showTimeRemaining()">
+                    <rect width="100" height="10"></rect>
+                    <rect y="30" width="100" height="10"></rect>
+                    <rect y="60" width="100" height="10"></rect>
+                </svg>
+                <div class="closeBtn hide" onclick="showMobileHomeScreen()">&times;</div>
+            </div>
+        </header>
+        <div id="popupModal">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup()">&times;</div>
+                <fieldset>
+                    <legend>Select a reason to end class</legend>
+                    <div class="classCompleted">
+                        <input type="radio" id="ClassCompleted" name="EndClass" value="ClassCompleted" checked>
+                        <label for="ClassCompleted">Class Completed</label>
+                    </div>
+                    <div class="classInterrupted">
+                        <input type="radio" id="ClassInterrupted" name="EndClass" value="ClassInterrupted">
+                        <label for="ClassInterrupted">Class Interrupted/aborted</label>
+                        <div class="sub1">
+                            <div>
+                                <input type="radio" name="level1" value="reason1" id="reason1" checked/>
+                                <label for="reason1">Student didn't show up for the class.</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="level1" value="reason2" id="reason2"/>
+                                <label for="reason2">Student didn't show any interest.</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="level1" value="reason3" id="reason3"/>
+                                <label for="reason3">Student got disconnected.</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="level1" value="reason3" id="reason4"/>
+                                <label for="reason4">I got disconnected.</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="level1" value="reason3" id="otherReason"/>
+                                <label for="otherReason">Other reason</label>
+                                <div class="sub2">
+                                    <textarea rows="4" cols="50" name="comment" placeholder="Type here"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <button class="endClassButton" id="stop_timer" onclick="endClass()">End Class</button>
+                <button class="cancelButton" onclick="togglePopup()">Cancel</button>
+            </div>
+        </div>
+    </body>
+</html>

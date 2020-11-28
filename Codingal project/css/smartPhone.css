@@ -1,0 +1,73 @@
+/*
+    This is the CSS for SmartPhones
+*/
+@media screen and (max-width: 500px){
+    header {
+        margin: 0;
+    }
+
+    input {
+        width: 15px;
+        height: 15px;
+    }
+
+    header .brandImageAndHeading {
+        margin-left: 15px;
+    }
+
+    .brandImageAndHeading img {
+        width: 100px;
+        height: 50px;
+    }
+
+    .hamburger svg {
+        width: 25px;
+        height: 20px;
+    }
+
+    .brandImageAndHeading .showClassName {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .hamburger .closeBtn {
+        width: 20px;
+        height: 20px;
+        font-size: 25px;
+    }
+
+    header .showTimerInMobile {
+        top: 20vh;
+    }
+
+    .showTimerInMobile #timer {
+        font-size: 40px;
+    }
+
+    .showTimerInMobile .endClassButton {
+        font-size: 25px;
+        padding: 10px 30px;
+    }
+
+    #popupModal .content {
+        width: 90vw;
+    }
+
+    #popupModal .content .close-btn {
+        font-size: 20px;
+    }
+
+    fieldset > legend {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    fieldset label {
+        font-size: 13px;
+    }
+
+    .content .endClassButton {
+        padding: 10px 25px;
+    }
+
+}

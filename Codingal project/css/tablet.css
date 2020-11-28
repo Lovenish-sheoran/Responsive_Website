@@ -1,0 +1,73 @@
+/*
+    For tablet screens
+*/
+@media screen and (max-width: 800px){
+    header {
+        margin-top: 10px;
+    }
+
+    .brandImageAndHeading img {
+        width: 200px;
+        height: 70px;
+    }
+
+    .brandImageAndHeading .heading {
+        display: none;
+    }
+
+    .brandImageAndHeading .showClassName {
+        display: flex;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+    }
+
+    header .timerAndEndClass {
+        display: none;
+    }
+
+    header .showTimerInMobile {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 30vh;
+        width: 100vw;
+        justify-content: center;
+    }
+
+    .showTimerInMobile #timer {
+        font-size: 80px;
+        color: gray;
+        margin: 0;
+    }
+
+    .showTimerInMobile .endClassButton {
+        margin-top: 50px;
+        padding: 20px 50px;
+        font-size: 50px;
+    }
+
+    header .hamburger {
+        display: flex;
+        align-items: center;
+        margin-right: 5vw;
+    }
+
+    .hamburger svg {
+        fill: gray;
+    }
+
+    .hamburger .closeBtn {
+        display: block;
+        width: 50px;
+        height: 50px;
+        font-size: 50px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    #popupModal .content {
+        width: 60vw;
+    }
+}
